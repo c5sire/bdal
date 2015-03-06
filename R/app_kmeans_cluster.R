@@ -12,7 +12,7 @@
 #' @export
 app_kmeans_cluster <- function(data) {
     shinyApp(
-      ui = fluidPage(responsive = FALSE,
+      ui = fluidPage(
                      fluidRow(style = "padding-bottom: 20px;",
                               column(4, selectInput('xcol', 'X Variable', names(data))),
                               column(4, selectInput('ycol', 'Y Variable', names(data),

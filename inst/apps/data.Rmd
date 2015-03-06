@@ -1,0 +1,13 @@
+---
+title: "data"
+author: "Reinhard SImon"
+date: "March 6, 2015"
+output: html_document
+runtime: shiny
+---
+
+```{r, echo = FALSE}
+data(iris)
+library(bdal)
+app_kmeans_cluster(iris)
+```
