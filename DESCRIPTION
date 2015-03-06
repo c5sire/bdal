@@ -1,0 +1,17 @@
+Package: bdal
+Type: Package
+Title: A Good Title
+Version: 0.0.1.9000
+Date: 2015-03-06
+Authors@R: as.person(c(
+   "Reinard Simon <r.simon@cgiar.org> [aut, cre]",
+   "International Potato Center (CIP) [cph]"
+  ))
+Description: A thorough description
+License: MIT + file LICENSE
+Depends: R (>= 3.1.2)
+URL: http://github.com/c5sire/bdal
+BugReports: http://github.com/c5sire/bdal/issues
+Suggests: knitr,
+    testthat
+VignetteBuilder: knitr
