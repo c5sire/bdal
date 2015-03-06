@@ -18,8 +18,4 @@ Creates a shiny widget to display the study in tabular form.
 \author{
 Reinhard Simon
 }
-\seealso{
-Other study: \code{\link{get_study}};
-  \code{\link{list_studies}}
-}
 

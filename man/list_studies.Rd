@@ -25,7 +25,6 @@ may change in a future revision.
 author
 }
 \seealso{
-Other study: \code{\link{app_view_study}};
-  \code{\link{get_study}}
+Other study: \code{\link{get_study}}
 }
 

@@ -1,4 +1,4 @@
-library(shiny)
+#library(shiny)
 
 #' app_view_study
 #'
@@ -7,7 +7,7 @@ library(shiny)
 #' @param data a data.frame
 #' @return character a string; default is 'Hello, world!'
 #' @author Reinhard Simon
-#' @family study
+#' @family study, app
 #' @export
 app_view_study <- function(data) {
   #stopifnot(is.character(name))

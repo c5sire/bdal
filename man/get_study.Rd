@@ -21,7 +21,6 @@ Get a section (=sheet) from a study.
 Reinhard Simon
 }
 \seealso{
-Other study: \code{\link{app_view_study}};
-  \code{\link{list_studies}}
+Other study: \code{\link{list_studies}}
 }
 
