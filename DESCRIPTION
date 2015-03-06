@@ -14,6 +14,7 @@ License: MIT + file LICENSE
 Depends: R (>= 3.1.2)
 URL: http://github.com/c5sire/bdal
 BugReports: http://github.com/c5sire/bdal/issues
+Imports: openxlsx, stringr, shiny
 Suggests: knitr,
     testthat
 VignetteBuilder: knitr
