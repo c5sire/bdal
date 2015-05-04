@@ -75,6 +75,7 @@ post_fieldbook <- function(fieldbook, path, crop_id, program_id, phase_id){
 
 # post_factor
 
+# post_template
 
 
 #' init_db
@@ -115,7 +116,21 @@ init_db <- function(path = NULL) {
     post_program(path, "PT", "YL", "Yield", "some text")
   }
   
+  if(!dbExistsTable(db, "phases")){
+    dbSendQuery(conn = db,
+                "CREATE TABLE phases
+                (id INTEGER PRIMARY KEY,
+                crop_id TEXT,
+                program_id TEXT,
+                phase_id TEXT,
+                phase_name TEXT,
+                description TEXT
+                )")
+    post_program(path, "PT", "YL", "Yield", "some text")
+  }
   
+  
+    
   if(!dbExistsTable(db, "fieldbooks")){
     dbSendQuery(conn = db,
                 "CREATE TABLE fieldbooks
@@ -123,6 +138,7 @@ init_db <- function(path = NULL) {
                 fb_name TEXT,
                 crop_id TEXT,
                 program_id TEXT,
+                phase_id TEXT,
                 subtype TEXT,
                 version TEXT,
                 imported TEXT,
@@ -130,6 +146,37 @@ init_db <- function(path = NULL) {
                 )")
     
   }
+  
+  if(!dbExistsTable(db, "germplasm_list")){
+    dbSendQuery(conn = db,
+                "CREATE TABLE germplasm_list
+                (id INTEGER PRIMARY KEY,
+                germplasm_list_id TEXT,
+                germplasm_list_name TEXT,
+                crop_id TEXT,
+                germplasm_list_type TEXT,
+                description TEXT
+                )")
+  }
+  
+  if(!dbExistsTable(db, "germplasm")){
+    dbSendQuery(conn = db,
+                "CREATE TABLE germplasm
+                (id INTEGER PRIMARY KEY,
+                germplasm_id TEXT,
+                stock_id TEXT,
+                germplasm_name TEXT,
+                crop_id TEXT,
+                germplasm_list_id TEXT,
+                pedigree TEXT,
+                origin TEXT,
+                vines_per_plot TEXT,
+                description TEXT
+                )")
+    
+  }
+  
+  
 }
 
 register_crop <- function(con, crop) {
