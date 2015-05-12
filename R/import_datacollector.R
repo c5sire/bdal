@@ -10,7 +10,7 @@ get_minimal_meta <- function (minimal) {
 
 
 
-import_datacollector <- function(filepath, db = "HIDAPDB"){
+import_datacollector <- function(filepath){
   if(!file.exists(filepath)) stop(paste(filepath,"does not exist!"))
   minimal <- readxl::read_excel(filepath, "Minimal")
   mm <- get_minimal_meta(minimal)
