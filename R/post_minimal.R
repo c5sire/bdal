@@ -53,7 +53,7 @@ update_resource <- function(adf, tbl, id_col){
       sql <- paste("UPDATE ",tbl," SET ",mval, " WHERE (id = '", id, "' AND ",
                    id_col," = '",
                    fac_cm[i], "')", sep="")
-      print(sql)
+      #print(sql)
       res <- RSQLite::dbSendQuery(con, sql)
     }
     # for those only present in adf -> insert

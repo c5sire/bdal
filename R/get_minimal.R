@@ -7,6 +7,7 @@ get_resource<- function(id, tbl){
   } else {
     return(NULL)
   }
+  RSQLite::dbDisconnect(con)
   dbq
 }
 
@@ -43,7 +44,7 @@ get_fieldbook <- function(id){
 }
 
 get_fieldtrial <- function(id){
-  list(Minimal = get_minimal(id),
+  list(Minimal = get_minimal(id)[, -c(1:5)],
        Installation = get_installation(id)[, -c(1:5)],
        Material_list = get_material_list(id)[, -c(1:5)],
        Soil_analysis = get_soil_analysis(id)[, -c(1:5)],
