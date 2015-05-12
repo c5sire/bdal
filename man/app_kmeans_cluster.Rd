@@ -18,4 +18,8 @@ Here more details
 \author{
 Reinhard Simon
 }
+\seealso{
+Other res: \code{\link{app_view_study}};
+  \code{\link{get_fieldbook}}
+}
 

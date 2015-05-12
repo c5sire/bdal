@@ -18,4 +18,8 @@ Creates a shiny widget to display the study in tabular form.
 \author{
 Reinhard Simon
 }
+\seealso{
+Other res: \code{\link{app_kmeans_cluster}};
+  \code{\link{get_fieldbook}}
+}
 
